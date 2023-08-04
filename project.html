@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>project</title>
+   
+    <style>
+       *{   
+        margin: 0;
+       }
+         .gr li{   
+            list-style: none;
+            display: inline;
+            padding:10px;
+            font-style:italic;
+            font-weight: bold;
+            text-align: left;
+        
+         }
+         .c li:hover{
+            background-color: white;
+            color: red;
+         }
+         .c a:hover{
+            color: red;
+         }
+         .gr a{
+            text-decoration: none;
+            color:white;
+         }
+         .gr{
+            background-color: rgb(2, 2, 59);
+            padding: 10px;
+         }
+         .b { 
+            text-align: right;
+          
+         }
+         .c li{
+            list-style: none;
+            display: inline;
+            padding: 30px;
+           
+         }
+         .c{
+            background-color: aqua;
+            padding: 30px;
+            flex-basis:  200px;
+         }
+         .c a{
+            text-decoration: none;
+            
+         }
+         .img{
+            background-image: url("data:image/jpeg;base64,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");                
+            height: 445px;
+            width: 1350px;
+            background-size: cover;
+            animation:hi 10s infinite;
+        
+         }
+         @keyframes hi{
+
+            20%{
+                background-image: url("https://149695847.v2.pressablecdn.com/wp-content/uploads/2017/09/college-1.jpg");
+
+            }
+            40%{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2ZyCmlRm96NOHl1dDKh2WjkLyO8gJrICSw&usqp=CAU");
+            }
+            60%{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLAwQL03EGTEX8h36OK5u6-d0fHizAT8nNTQ&usqp=CAU");
+            }
+            90%{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRyXhJ-Z7pDYzqm97yH03xs8zya_amf-dsw&usqp=CAU");
+            }
+           
+         }
+         .h :hover{
+            color: red;
+         }
+         .ho:hover{
+            color: red;
+         }
+          .hi :hover{
+          color: red;
+         }
+         .h {
+            border-radius: 30px;
+         }
+    </style>
+           <!-- this is used for bootstrap -->
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+    <script src="https://kit.fontawesome.com/74c4addc41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
+        <marquee behavior="alternate" direction="right" style="background-color: rgb(243, 243, 13);"> Our Best offer ever!! Summer Special-get 3 Course At 22499/-Only</marquee>
+    
+    <div class="gr">
+    <ul >
+        <li> 
+        <a class="ho">Email:kumarmohan70087@gmail.com</a>
+        </li>
+        <li class="hi">
+        <a href="">+91 9597121258</a>
+        </li>
+        </ul>
+        
+       <nav style=" position: absolute; right: 0; top: 50px;"  >
+        <ul class="b">
+        <li>
+        <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C550525804944%7Cb%7Cfacebook%20%27%7C&placement=&creative=550525804944&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D9061988%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA9YugBhCZARIsAACXxeLkWEj5EVgAjK4j5vD8BckCUBLK0wAYFOoE5YzhvAblof656_kMyCsaAlrtEALw_wcB"> <i class="fa-brands fa-facebook"></i></a>
+        </li>
+         <li>
+        <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/sem/campaign/emailsignup/?campaign_id=13530338610&extra_1=s|c|547419127631|e|instagram%20%27|&placement=&creative=547419127631&keyword=instagram%20%27&partner_id=googlesem&extra_2=campaignid%3D13530338610%26adgroupid%3D126262414014%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-1321618851291%26loc_physical_ms%3D9061988%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA9YugBhCZARIsAACXxeKhb4TTdipqpHeHUMfRyzZ3MuTqKaeq3pC_e2lzjSJrOP4IS7khjCYaAk5bEALw_wcB"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+            <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        </ul>
+    </nav>
+   </div>
+   
+     <section>
+
+        <ul  class="c">
+            <li  style="color: green; font-size: 30px;"> 
+                <i class="fa-solid fa-graduation-cap"></i>Rj technology
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5500/second%20IF.html">About</a>
+            </li>
+            <li> <label>
+                <a href="">Course</a></label>
+                <select>
+                    <option>Front End</option>
+                    <option >Back End</option>
+                    <input type="hidden">
+                
+            </select>
+            </li>
+            <li>
+                <a href="">Online Training</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+           
+               <button style="background-color:rgb(146, 240, 6); ; font-weight: bold; position: absolute; right: 20px; color:black; border-radius: 20px;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Enquariy</button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Request For class room & online training quotation</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> 
+                      <label ></label>
+                      <input type="text" placeholder="Enter Your Name"><br><br>
+                      <label ></label>
+                      <input type="text" placeholder="Enter Your Email"><br><br>
+                      <label ></label>
+                      <input type="text" placeholder="Enter Your Mobile no"><br><br>
+                      <select >
+                      <option >select course</option>
+                      <option >HTML</option>
+                      <option >CSS</option>
+                      <option >Javs Script</option>
+                      <option >React JS</option>
+                      
+                    </select>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        </ul> 
+    </section>
+
+       <div class="img" style="margin: 0;">
+        <h1 style="padding: 30px; height:0px;">Rj Technology</h1>
+        <h3  style="padding: 30px; height: 0px;">Best Online&Classroom training Institute</h3>
+        <p style="padding: 30px; width: 500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo possimus unde aspernatur, optio dolores debitis consectetur consequuntur et. Quia quae modi aspernatur amet libero eius impedit unde voluptates a laborum.</p>
+        <button class="h" style="  position: absolute; left: 50px;"><a href="" style="text-decoration: none; font-weight: bold;" >Apply Online</a></button>
+       </div>
+
+       
+
+</body>
+</html>
